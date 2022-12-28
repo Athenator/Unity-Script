@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Калькулятор</h1>
+    <input type="text" id = "va1" value = "0"> 
+    <button onclick="plus()">+</button> 
+    <button onclick="minus()">-</button> 
+    <button onclick="multiply()">*</button> 
+    <button onclick="divide()">/</button> 
+    <input type="text" id = "va2" value = "0"> 
+        =
+    <input type="text" id = "result" readonly value="0">
+
+
+    <script>
+    function plus(){
+        va1 = +document.getElementById("va1").value;
+        va2 = +document.getElementById("va2").value;
+        result = va1 + va2;
+    
+        document.getElementById("result").value = result;
+    }
+    function minus(){
+        va1 = +document.getElementById("va1").value;
+        va2 = +document.getElementById("va2").value;
+        result = va1 - va2;
+    
+        document.getElementById("result").value = result;
+    }
+    function multiply(){
+        va1 = +document.getElementById("va1").value;
+        va2 = +document.getElementById("va2").value;
+        result = va1 * va2;
+    
+        document.getElementById("result").value = result;
+    }
+    function  divide(){
+        va1 = +document.getElementById("va1").value;
+        va2 = +document.getElementById("va2").value;
+        result = (va2 != 0) ? va1 / va2 : "Делить на ноль нельзя!"
+        
+        document.getElementById("result").value = result;
+    }
+    </script>
+</body>
+</html>
